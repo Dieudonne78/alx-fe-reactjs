@@ -3,7 +3,6 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import WelcomeMessage from './WelcomeMessage'
-import UserProfile from './UserProfile'
 import ProfilePage from './ProfilePage'
 import UserContext from './UserContext'
 
@@ -16,7 +15,6 @@ function App() {
   return (
     <>
       <div>
-      <UserProfile name='Alice' age={25} bio={Mybio}/>
       <WelcomeMessage />
 
         <a href="https://vitejs.dev" target="_blank">
