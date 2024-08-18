@@ -10,14 +10,16 @@ import UserProfile from './UserProfile'
 
 
 function App() {
+  const Mybio = 'Loves football and photography'
   const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
-      <UserProfile name='Alice' age={25} bio='Loves hiking and photography'/>
-      <WelcomeMessage />
       <Header />
+      <UserProfile name='Alice' age={25} bio={Mybio}/>
+      <WelcomeMessage />
+     
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logogf" />
         </a>
