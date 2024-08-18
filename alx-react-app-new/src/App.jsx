@@ -7,6 +7,7 @@ import Header from './Header'
 import MainContent from './MainContent'
 import Footer from './Footer'
 import UserProfile from './UserProfile'
+import Counter from './Counter'
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
+      <Counter />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
