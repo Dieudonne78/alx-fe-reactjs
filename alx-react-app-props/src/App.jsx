@@ -5,7 +5,7 @@ import './App.css'
 import WelcomeMessage from './WelcomeMessage'
 import UserProfile from './UserProfile'
 import ProfilePage from './ProfilePage'
-import context from './UserContext'
+import UserContext from './UserContext'
 
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <context.Provider value ={userdata} > <ProfilePage /></context.Provider>
+      <UserContext.Provider value ={userdata} > <ProfilePage /></UserContext.Provider>
     </>
   )
 }
