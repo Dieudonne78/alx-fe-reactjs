@@ -1,10 +1,10 @@
 import { Route,Routes } from 'react-router-dom';
 import './App.css';
-import About from './About';
-import Services from './Services';
-import Home from './Home';
-import Contact from './Contact';
-import Navbar from './Navbar';
+import About from './components/About';
+import Services from './components/Services';
+import Home from './components/Home';
+import Contact from './components/Contact';
+import Navbar from './components/Navbar';
 function App() {
   return (
     <>
