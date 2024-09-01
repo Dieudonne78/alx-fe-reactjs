@@ -11,6 +11,7 @@ import { Routes,Route,BrowserRouter } from 'react-router-dom'
 
 function App() {
   const requireAuth = true
+  ["/blog/:id", "BlogPost"]
 
   return (
     <BrowserRouter>
