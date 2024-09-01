@@ -5,6 +5,7 @@ import './App.css'
 import Profile from './components/Profile'
 import ProfileDetail from './components/ProfileDetails'
 import ProfileSetting from './components/ProfileSettings'
+import protectedRoute from './components/ProtectedRoute'
 import { Routes,Route } from 'react-router-dom'
 
 function App() {
@@ -14,10 +15,12 @@ function App() {
     <>
       <Routes>
         { requireAuth ? (
-          <Route path='profile' element={<Profile />}>
+          <protectedRoute>
+            <Route path='profile' element={<Profile />}>
           <Route path='details' element={<ProfileDetail />}/>
           <Route path='settings' element={<ProfileSetting />}/> 
          </Route>
+          </protectedRoute>
         ):null}
       </Routes>
     </>
