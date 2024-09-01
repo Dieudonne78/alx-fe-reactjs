@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import React from 'react'
-function Registration(){
+function RegistrationForm(){
   const [username,setUsername]= useState('')
   const [email,setEmail]=useState('')
   const [password,setPassword]=useState('')
@@ -34,4 +34,4 @@ function Registration(){
   );
 }
 
-export default Registration;
+export default RegistrationForm;
