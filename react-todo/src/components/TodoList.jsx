@@ -1,5 +1,7 @@
+import { useState } from "react";
 function TodoList(){
-  const todos =[
+  ["useState", "key"]
+  const [todos,setTodos] = useState([
     {
       todo:'walking',
       isComplited:false
@@ -20,7 +22,7 @@ function TodoList(){
       todo:'walking',
       isComplited:false
     },
-  ]
+  ])
   return(
     <>
     {
