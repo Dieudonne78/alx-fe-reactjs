@@ -1,4 +1,4 @@
-function addTodoForm(){
+function AddTodoForm(){
   return(
     <>
     <form>
@@ -9,4 +9,4 @@ function addTodoForm(){
   )
 }
 
-export default addTodoForm;
+export default AddTodoForm;

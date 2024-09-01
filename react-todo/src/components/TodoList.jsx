@@ -1,4 +1,4 @@
-function todoList(){
+function TodoList(){
   const todos =[
     {
       todo:'walking',
@@ -32,4 +32,4 @@ function todoList(){
   )
 }
 
-export default todoList;
+export default TodoList;
