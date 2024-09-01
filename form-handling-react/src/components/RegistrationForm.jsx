@@ -6,7 +6,13 @@ function Registration(){
   const [password,setPassword]=useState('')
   const [errors,setErrors]=useState(false)
   
-  if(!username||!password||!email){
+  if(!username){
+    setErrors(true)
+  }
+  if(!email){
+    setErrors(true)
+  }
+  if(!password){
     setErrors(true)
   }
   const handleSubmit = (e)=>{
