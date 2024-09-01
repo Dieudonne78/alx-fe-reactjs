@@ -6,6 +6,7 @@ function Registration(){
   const [username,setUsername]= useState('')
   const [email,setEmail]=useState('')
   const [password,setPassword]=useState('')
+  const [errors,setErrors]=useState(false)
   const formik = useFormik({
     initialValues:{
       username:'',
@@ -20,6 +21,9 @@ function Registration(){
     }),
 
     onSubmit:(values)=>{
+      if(!username||!password||!email)[
+         setErrors(true)
+      ]
       console.log('form submitted',values)
     }
 
@@ -31,6 +35,7 @@ function Registration(){
     <input type="text" name='username' placeholder="username" value={username}  onChange={formik.handleChange}/>
     <input type="email" name='email' placeholder="email" value={email} onChange={formik.handleChange}/>
     <input type="password" name='password' placeholder="password" value={password} onChange={formik.handleChange}/>
+    {errors && <span>Eiher username,email or password is empty</span>}
     <button type='submit'>Submit</button>
    </form>
    </>
