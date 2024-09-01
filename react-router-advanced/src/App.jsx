@@ -5,25 +5,26 @@ import './App.css'
 import Profile from './components/Profile'
 import ProfileDetail from './components/ProfileDetails'
 import ProfileSetting from './components/ProfileSettings'
-import protectedRoute from './components/ProtectedRoute'
-import { Routes,Route } from 'react-router-dom'
+import ProtectedRoute from './components/ProtectedRoute'
+import { Routes,Route,BrowserRouter } from 'react-router-dom'
+
 
 function App() {
   const requireAuth = true
 
   return (
-    <>
+    <BrowserRouter>
       <Routes>
         { requireAuth ? (
-          <protectedRoute>
+          <ProtectedRoute>
             <Route path='profile' element={<Profile />}>
           <Route path='details' element={<ProfileDetail />}/>
           <Route path='settings' element={<ProfileSetting />}/> 
          </Route>
-          </protectedRoute>
+          </ProtectedRoute>
         ):null}
       </Routes>
-    </>
+    </BrowserRouter>
   )
 }
 
