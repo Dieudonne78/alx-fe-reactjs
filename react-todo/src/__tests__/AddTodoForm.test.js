@@ -5,6 +5,7 @@ import '@testing-library/jest-dom/extend-expect';
 import AddTodoForm from './AddTodoForm';
 
 test('adds a new todo on form submission', () => {
+  
   // Step 1: Mock a function to handle the form submission
   const addTodo = jest.fn();
 
