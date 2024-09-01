@@ -6,15 +6,7 @@ function RegistrationForm(){
   const [password,setPassword]=useState('')
   const [errors,setErrors]=useState(false)
   
-  if(!username){
-    setErrors(true)
-  }
-  if(!email){
-    setErrors(true)
-  }
-  if(!password){
-    setErrors(true)
-  }
+  ["if (!username", "if (!email)", "if (!password)"]
   const handleSubmit = (e)=>{
     e.preventDefault()
     
