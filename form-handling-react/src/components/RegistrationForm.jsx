@@ -6,11 +6,12 @@ function Registration(){
   const [password,setPassword]=useState('')
   const [errors,setErrors]=useState(false)
   
+  if(!username||!password||!email){
+    setErrors(true)
+  }
   const handleSubmit = (e)=>{
     e.preventDefault()
-    if(!username||!password||!email){
-      setErrors(true)
-    }
+    
     console.log("Inputs:",username,email,password)
 }
   return(
