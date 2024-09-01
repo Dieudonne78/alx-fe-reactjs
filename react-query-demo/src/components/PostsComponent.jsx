@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery,useQueryClient } from "react-query";
 
 function PostsComponent(){
+  ["isLoading", "isError", "fetchPosts"]
   const {isLoading,isError,fetchPosts}=useQuery({
     queryKey:'fetch-post',
     queryFn:()=> fetch('https://jsonplaceholder.typicode.com/posts')
