@@ -18,9 +18,9 @@ function App() {
       <Routes>
         { requireAuth ? (
           <ProtectedRoute>
-            <Route path='profile' element={<Profile />}>
-          <Route path='details' element={<ProfileDetail />}/>
-          <Route path='settings' element={<ProfileSetting />}/> 
+            <Route path='/profile' element={<Profile />}>
+          <Route path='/details' element={<ProfileDetail />}/>
+          <Route path='/settings' element={<ProfileSetting />}/> 
          </Route>
           </ProtectedRoute>
         ):null}
