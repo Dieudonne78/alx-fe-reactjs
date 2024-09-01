@@ -5,6 +5,8 @@ import './App.css'
 import { QueryClient,QueryClientProvider } from 'react-query'
 import PostsComponent from './Components/PostsComponent'
 
+
+
 const queryClient = new QueryClient();
 function App() {
   return (
