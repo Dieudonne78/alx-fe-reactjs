@@ -1,5 +1,3 @@
-import {useFormik} from 'formik'
-import * as Yup from 'yup'
 import {useState} from 'react'
 import React from 'react'
 function Registration(){
@@ -7,34 +5,21 @@ function Registration(){
   const [email,setEmail]=useState('')
   const [password,setPassword]=useState('')
   const [errors,setErrors]=useState(false)
-  const formik = useFormik({
-    initialValues:{
-      username:'',
-      email:'',
-      password:''
-    },
-
-    validationSchema:Yup.object({
-      username:Yup.string().required('User name is required'),
-      email:Yup.string().required('Invalid email'),
-      password:Yup.string().required('Fill password')
-    }),
-
-    onSubmit:(values)=>{
-      if(!username||!password||!email)[
-         setErrors(true)
-      ]
-      console.log('form submitted',values)
+  
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+    if(!username||!password||!email){
+      setErrors(true)
     }
-
-   })
+    console.log("Inputs:",username,email,password)
+}
   return(
    <>
-   <form onSubmit={formik.handleSubmit}>
+   <form onSubmit={handleSubmit}>
 
-    <input type="text" name='username' placeholder="username" value={username}  onChange={formik.handleChange}/>
-    <input type="email" name='email' placeholder="email" value={email} onChange={formik.handleChange}/>
-    <input type="password" name='password' placeholder="password" value={password} onChange={formik.handleChange}/>
+    <input type="text" name='username' placeholder="username" value={username}  onChange={(e)=>setUsername(e.target.value)}/>
+    <input type="email" name='email' placeholder="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+    <input type="password" name='password' placeholder="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
     {errors && <span>Eiher username,email or password is empty</span>}
     <button type='submit'>Submit</button>
    </form>
