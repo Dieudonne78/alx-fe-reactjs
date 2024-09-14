@@ -1,7 +1,6 @@
-import { useEffect,useState } from "react";
 import data from '../data.json'
-import { Link } from "react-router-dom";
-function Homepage(){
+import { useEffect,useState } from "react";
+function Recipedetail(){
   const[jsonData,setJsonData] = useState([]);
   useEffect(()=>{
     setJsonData(data);
@@ -25,4 +24,4 @@ function Homepage(){
   )
 }
 
-export default Homepage;
+export default Recipedetail;
