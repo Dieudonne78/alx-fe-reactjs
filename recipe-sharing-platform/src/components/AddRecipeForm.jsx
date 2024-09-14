@@ -6,7 +6,8 @@ function Addrecipeform(){
   const[ingredients,setIngredients]=useState('');
   const[steps,setSteps]=useState('');
   const [error, setError] = useState(false)
-  function submitFunction(){
+  function handleSubmit(e){
+    e.preventDefault()
     if(title === '' || ingredients==='' || steps===''){
       setError(true)
       console.log('Provide your input')
@@ -14,11 +15,11 @@ function Addrecipeform(){
   }
 
   return(
-      <form>
+      <form onSubmit={handleSubmit}>
         <input onChange={(e)=>setTitle(e.target.value)} type="text" id="title" value={title}/>
         <textarea onChange={(e)=>setIngredients(e.target.value)} type="text" id="ingredients" value={ingredients}></textarea>
         <textarea onChange={(e)=>setSteps(e.target.value)} type="text" id="steps " value={steps }></textarea>
-        <button onClick={submitFunction} id="submission" > post the form data.</button>
+        <button type="submit" id="submission" > post the form data.</button>
       </form>
   )
 
