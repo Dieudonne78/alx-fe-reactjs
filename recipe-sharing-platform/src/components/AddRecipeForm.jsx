@@ -5,11 +5,11 @@ function Addrecipeform(){
   const[title,setTitle]=useState('');
   const[ingredients,setIngredients]=useState('');
   const[steps,setSteps]=useState('');
-  const [error, setError] = useState(false)
+  const [errors, setErrors] = useState(false)
   function handleSubmit(e){
     e.preventDefault()
     if(title === '' || ingredients==='' || steps===''){
-      setError(true)
+      setErrors(true)
       console.log('Provide your input')
     }
   }
@@ -20,6 +20,7 @@ function Addrecipeform(){
         <textarea onChange={(e)=>setIngredients(e.target.value)} type="text" id="ingredients" value={ingredients}></textarea>
         <textarea onChange={(e)=>setSteps(e.target.value)} type="text" id="steps " value={steps }></textarea>
         <button type="submit" id="submission" > post the form data.</button>
+        {errors && <small>All fields are required</small>}
       </form>
   )
 
