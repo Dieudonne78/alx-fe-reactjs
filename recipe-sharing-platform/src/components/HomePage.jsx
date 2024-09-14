@@ -10,10 +10,10 @@ function Homepage(){
   return(
     <>
       {jsonData.map((data)=>(
-        <div key={data.id}>
-          <h2>{data.title}</h2>
-          <img src={data.image}/> 
-          <p>{data.summary}</p>
+        <div key={data.id} className="shadow-lg rounded-lg hover:shadow-2xl ">
+          <h2 className="font-semibold text-lg">{data.title}</h2>
+          <img className="w-full object-cover"src={data.image}/> 
+          <p className=" font-semibold text-sm">{data.summary}</p>
         </div>
       ))}
     </>
