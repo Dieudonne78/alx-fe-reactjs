@@ -16,10 +16,10 @@ function Addrecipeform(){
 
   return(
       <form className="grid grid-cols-1 grid-cols-2 grid-cols-3 md"onSubmit={handleSubmit}>
-        <input className="shadow-lg" onChange={(e)=>setTitle(e.target.value)} type="text" id="title" value={title}/>
-        <textarea className="rounded-lg" onChange={(e)=>setIngredients(e.target.value)} type="text" id="ingredients" value={ingredients}></textarea>
-        <textarea className="text-sm" onChange={(e)=>setSteps(e.target.value)} type="text" id="steps " value={steps }></textarea>
-        <button className="hover:shadow-2xl" type="submit" id="submission" > post the form data.</button>
+        <input className="shadow-lg font-semibold" onChange={(e)=>setTitle(e.target.value)} type="text" id="title" value={title}/>
+        <textarea className="rounded-lg font-semibold" onChange={(e)=>setIngredients(e.target.value)} type="text" id="ingredients" value={ingredients}></textarea>
+        <textarea className="text-sm font-semibold" onChange={(e)=>setSteps(e.target.value)} type="text" id="steps " value={steps }></textarea>
+        <button className="hover:shadow-2xl font-semibold" type="submit" id="submission" > post the form data.</button>
         {errors && <small>All fields are required</small>}
       </form>
   )
