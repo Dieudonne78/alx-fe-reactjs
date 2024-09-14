@@ -9,6 +9,7 @@ function Homepage(){
   },[])
   return(
     <>
+      <div className="grid grid-cols-1 grid-cols-2 grid-cols-3 md">
       {jsonData.map((data)=>(
         <div key={data.id} className="shadow-lg rounded-lg hover:shadow-2xl ">
           <h2 className="font-semibold text-lg">{data.title}</h2>
@@ -16,6 +17,7 @@ function Homepage(){
           <p className=" font-semibold text-sm">{data.summary}</p>
         </div>
       ))}
+      </div>
     </>
   )
 }
