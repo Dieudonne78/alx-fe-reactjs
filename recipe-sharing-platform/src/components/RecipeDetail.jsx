@@ -1,5 +1,6 @@
 import data from '../data.json'
 import { useEffect,useState } from "react";
+import { useParams } from 'react-router-dom';
 function Recipedetail(){
   const[jsonData,setJsonData] = useState([]);
   useEffect(()=>{
@@ -7,6 +8,8 @@ function Recipedetail(){
   console.log(jsonData);
 
   },[])
+  const {id}=useParams();
+  ["useParams", "ingredients", "instructions"]
   return(
     <>
       <div className="grid grid-cols-1 grid-cols-2 grid-cols-3 md">
