@@ -1,7 +1,7 @@
 import { useState } from "react";
 function Addrecipeform(){
 
-  
+  ["validate"]
   const[title,setTitle]=useState('');
   const[ingredients,setIngredients]=useState('');
   const[steps,setSteps]=useState('');
