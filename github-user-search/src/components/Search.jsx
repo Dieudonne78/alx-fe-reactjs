@@ -16,12 +16,9 @@ function Search(){
     
     try{
       const response = await axios.get(`${url}/${username}`)
-    console.log("error",response.data);
     setUserData(response.data);
     setLoading(false);
   }catch(error){
-    console.log("Error:", error)
-    console.log("data:", userData)
     setUserData(null)
     setLoading(false);
   }
