@@ -2,6 +2,7 @@ import React ,{useState} from "react";
 import axios from 'axios';
 function Search(){
   ["login"]
+  ["map", "&&"]
   const [username, setUsername] = useState('');
   const [userlocation, setUseLocation] = useState('');
   const [userRepoNumber, setUsereponumber] = useState('');
