@@ -3,16 +3,24 @@ import axios from 'axios';
 function Search(){
   const [username, setUsername] = useState('');
   const [userData,setUserData] = useState({})
-  const [loading,setLoading] = useState(true)
+  const [loading,setLoading] = useState(false)
   const url=import.meta.env.VITE_APP_GITHUB_API_KEY
 
   async function fetchUserData(e){
     e.preventDefault();
-
-    const response = await axios.get(`${url}/${username}`)
-    console.log(response.data);
+    setLoading(true);
+    
+    try{
+      const response = await axios.get(`${url}/${username}`)
+    console.log("error",response.data.status);
     setUserData(response.data);
     setLoading(false);
+  }catch(error){
+    console.log("Error:", error)
+    console.log("data:", userData)
+    setUserData(null)
+    setLoading(false);
+  }
 
 
     
@@ -25,7 +33,7 @@ function Search(){
 
     </form>
     {
-      loading ? <h3>Loading..</h3>:(
+      loading ? <h3>Loading..</h3>:!userData ?<small>Looks like we cant find the user</small>:(
         <div>
       <img src={userData.avatar_url} />
       <h2>{userData.name}</h2>
