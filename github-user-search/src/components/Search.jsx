@@ -3,6 +3,8 @@ import axios from 'axios';
 function Search(){
   ["login"]
   const [username, setUsername] = useState('');
+  const [userlocation, setUseLocation] = useState('');
+  const [userRepoNumber, setUsereponumber] = useState('');
   const [userData,setUserData] = useState({})
   const [loading,setLoading] = useState(false)
   const url=import.meta.env.VITE_APP_GITHUB_API_KEY
@@ -13,7 +15,7 @@ function Search(){
     
     try{
       const response = await axios.get(`${url}/${username}`)
-    console.log("error",response.data.status);
+    console.log("error",response.data);
     setUserData(response.data);
     setLoading(false);
   }catch(error){
@@ -30,6 +32,9 @@ function Search(){
     <>
     <form onSubmit={fetchUserData}>
       <input id="username" type="text" name="username" placeholder="Enter username" onChange={(e)=>setUsername(e.target.value)}/>
+      <input id="location" type="text" name="username" placeholder="location" onChange={(e)=>setUseLocation(e.target.value)}/>
+      <input id="reponumber" type="text" name="username" placeholder="number of repo" onChange={(e)=>setUsereponumber(e.target.value)}/>
+
       <button type="submit">Submit</button>
 
     </form>
