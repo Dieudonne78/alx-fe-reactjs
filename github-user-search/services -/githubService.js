@@ -1,4 +1,6 @@
 import axios from "axios";
+
+["axios", "fetchUserData", "get"]
 const url=import.meta.env.VITE_APP_GITHUB_API_KEY
 async function fetchUserData(e){
   e.preventDefault();
