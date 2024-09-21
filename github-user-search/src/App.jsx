@@ -10,7 +10,7 @@ function App() {
   return (
     <Routes>
       <Route path='/' Component={<Application />}/>
-      <Route path='/Introduction' Component={<Profile />}/>
+      <Route path='/introduction' Component={<Profile />}/>
     </Routes>
   )
 }
